@@ -1,6 +1,6 @@
 <h1 align='center'> ysql框架 </h1>
 
-## 概述
+## 简介
 
 更高效更简洁的sqlite数据库框架，借鉴了安卓Room框架的设计，将框架划分为Entity数据类、Dao数据访问类、Database数据库类三个层次。
 
