@@ -7,12 +7,11 @@
 框架直接建立在sqlite官方库的基础之上，无其他依赖，性能损失很小，隐藏（自动实现）了许多烦人的中间细节，只需要关心sql语句与python数据应用场景。
 
 - 第三方库依赖：无
-- 最新版本：1.3.3
 - 项目地址：[ysql (gitee)](https://gitee.com/darlingxyz/ysql)
 - 更新日志：[CHANGELOG.md](https://gitee.com/darlingxyz/ysql/blob/master/CHANGELOG.md)
 - 使用文档：[ysql (github)](https://darlingxyz.github.io/ysql/#/)
 
-## 结构示例
+## 快速示例
 
 ```python
 @Entity
@@ -28,11 +27,12 @@ class DaoStudent:  # 定义一个数据访问类
     def get_student(self, student_id):
         pass
     
-@Path("test.db")
 class Database(MetaDatabase):  # 定义顶层数据库类，对外使用的唯一接口
     dao1 = DaoStudent()
     dao2 = ...
     dao3 = ...
+
+db = Database(db_path="test.db")  # 实例化数据库
 ```
 
 ## 使用方式
